@@ -9,10 +9,11 @@ const App = (props) => (
 	<Router>
 		<div>
 			<Route
-				path='/:page'
+				path='/:page?/:subpage'
 				render={({match}) => (
 					<h1>
-						PAGE: {match.params.page || 'Home'}
+						PAGE: {match.params.page || 'Home'}<br />
+						SUBPAGE: {match.params.subpage}
 					</h1>
 				)}
 			/>
