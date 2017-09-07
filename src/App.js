@@ -7,7 +7,11 @@ const App = () => (
 	<Router>
 		<div>
 			<Route exact path='/' component={Home} />
-			<Route path='/about' render={() => <h1>About</h1>} />
+			{/*<Route path='/about' render={() => <h1>About</h1>} />*/}
+			<Route
+				path='/about'
+				children={({match}) => match && <h1>About</h1>}
+			/>
 		</div>
 	</Router>
 );
