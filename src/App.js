@@ -9,7 +9,7 @@ const App = (props) => (
 	<Router>
 		<div>
 			<Route
-				path='/:page?/:subpage'
+				path='/:page?-:subpage?'
 				render={({match}) => (
 					<h1>
 						PAGE: {match.params.page || 'Home'}<br />
